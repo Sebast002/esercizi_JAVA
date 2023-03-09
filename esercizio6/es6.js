@@ -1,12 +1,8 @@
-function closureprintNamehelloName () {
-    const name = "Hello John";
-    return name;
+function printName() {
+    let helloName = "Hello John";
+    function inner() {
+        return helloName;
+    } return inner;
 }
 
-function innerhelloName () {
-    const name1 = "Hello John";
-    return name1;
-}
-
-console.log(closureprintNamehelloName());
-console.log(innerhelloName());
+console.log(printName()());
